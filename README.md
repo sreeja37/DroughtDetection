@@ -91,7 +91,7 @@ streamlit run Streamlit.py
 
 ### 🙌 Team
 
-- Sreeja Pandraju
+- Sreeja Pandraju  ~~ @sree37
 - Adithya Manthena
 - Swarupa Palaparthy
 - Geetha Ramavath
