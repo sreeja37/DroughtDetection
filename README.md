@@ -1,15 +1,15 @@
-# 🌾 Comparative Analysis of Drought Detection Using Satellite Imagery with Deep Learning Models 
+# 🌾 Comparative Analysis of Drought Detection Using Satellite Imagery with Deep Learning Models
+
+An AI-powered tool to detect drought-prone areas using satellite imagery and deep learning models.
 
 ![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-green)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-> An AI-powered tool to detect drought-prone areas using satellite imagery and deep learning models.
-
 ---
 
-## 🔗 Live App
+### 🔗 Live Demo
 
-👉 [Click here to use the app](https://droughtdetection.streamlit.app/)
+👉 **[Click here to use the app](https://droughtdetection.streamlit.app/)**
 
 ---
 
@@ -17,31 +17,33 @@
 
 ### 📌 About the Project
 
-Droughts impact agriculture, water resources, and rural livelihoods. This project provides a scalable solution using satellite imagery and deep learning for automated drought detection.
+Droughts severely impact agriculture, water resources, and local livelihoods. This project aims to provide a scalable, automated drought detection system using satellite imagery and deep learning.
 
-- Models used: **EfficientNetB0**, **MobileNetV2**, **VGG16**, and **Custom CNN**
-- Classification is based on **cattle presence** (proxy indicator of vegetation and water availability)
-- Web interface is built with **Streamlit**
+- **Models used**: EfficientNetB0, MobileNetV2, VGG16, and a custom CNN  
+- **Classification basis**: Cattle presence (as a proxy for vegetation and water)  
+- **Frontend**: Built with Streamlit for user-friendly interaction  
 
 ---
 
 ### 📁 Dataset and Preprocessing
 
-- Dataset Source: **W&B Drought Watch** (based on Landsat-8 RGB bands)
-- Classes:
-  - Class 0: 0 or 1 cow → Drought
-  - Class 1: 2+ cows → No Drought
-- Image Shape: 65×65×3 (RGB)
-- Preprocessing:
-  - Band selection (RGB), normalization
-  - Augmentation (flip, rotate, brightness)
-  - TFRecord conversion
+- **Source**: W&B Drought Watch Dataset (Landsat-8 RGB bands)  
+- **Image Size**: 65×65×3  
+
+**Classes**:  
+- Class 0: 0 or 1 cow → *Drought*  
+- Class 1: 2 or more cows → *No Drought*  
+
+**Preprocessing Includes**:
+- RGB band extraction and normalization  
+- Data augmentation (flip, rotate, brightness changes)  
+- TFRecord conversion for model training  
 
 ---
 
 ### 🧠 Deep Learning Models
 
-Trained and evaluated using standard metrics (Accuracy, Precision, Recall, F1-Score):
+All models were evaluated using standard classification metrics:
 
 | Model          | Accuracy | Precision | Recall | F1-Score |
 |----------------|----------|-----------|--------|----------|
@@ -52,12 +54,12 @@ Trained and evaluated using standard metrics (Accuracy, Precision, Recall, F1-Sc
 
 ---
 
-### 🖼️ Workflow
+### 🖼️ Workflow Overview
 
-1. **Upload Satellite Image**
-2. **Satellite Validator** checks image type
-3. **Drought Detector** classifies drought status
-4. **Visual Result & Recommendation** shown
+1. Upload satellite image  
+2. Satellite validator checks if image is valid  
+3. Drought detection model analyzes the image  
+4. Results and recommendations are displayed visually  
 
 ---
 
@@ -75,7 +77,7 @@ Trained and evaluated using standard metrics (Accuracy, Precision, Recall, F1-Sc
 
 ## ⚙️ Execution Process
 
-### 📦 Installation
+### 📦 Installation Instructions
 
 ```bash
 git clone https://github.com/sreeja37/DroughtDetection.git
@@ -84,20 +86,20 @@ pip install -r requirements.txt
 streamlit run Streamlit.py
 ```
 
-- Ensure you place the `.keras` model files in the `models/` folder
-- The app will prompt for a satellite image upload and analyze it in real time
+- Place the trained `.keras` models into the `models/` directory.  
+- The app will prompt for an image upload and perform drought analysis in real time.
 
 ---
 
-### 🙌 Team
+## 🙌 Team
 
-- Sreeja Pandraju 
-- Adithya Manthena
-- Swarupa Palaparthy
-- Geetha Ramavath
+- **Sreeja Pandraju** – [@sreeja37](https://github.com/sreeja37)  
+- Adithya Manthena  
+- Swarupa Palaparthy  
+- Geetha Ramavath  
 
 ---
 
-### 📜 License
+## 📜 License
 
-This project is open-sourced under the MIT License.
+This project is licensed under the [MIT License](https://github.com/sreeja37/DroughtDetection/blob/main/LICENSE).
